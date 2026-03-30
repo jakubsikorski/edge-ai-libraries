@@ -58,6 +58,7 @@ The Plugin System extends the service's functionality by handling interactions w
 - **Ollama Hub Plugin**: Interfaces with Ollama tool to pull and manage models from the Ollama model library.
 - **Ultralytics Hub Plugin**: Downloads computer vision models, such as YOLO, from the Ultralytics framework.
 - **Geti™ Plugin**: Downloads models optimized through the Geti™ platform.
+- **HLS Plugin**: Download pre-configured Health AI suite models from Github.
 
 **Conversion Plugins:**
 
