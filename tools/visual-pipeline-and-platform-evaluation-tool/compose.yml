@@ -157,6 +157,7 @@ services:
     pid: host # qmassa needs it
     volumes:
       - "./shared/collector-signals:/app/.collector-signals"
+      - "./shared/metrics:/volumes/metrics"
     restart: on-failure:5
     depends_on:
       vippet:
@@ -176,7 +177,7 @@ services:
     ports:
       - "8554:8554"     # RTSP
       - "8889:8889"     # WebRTC signaling/HTTP
-      - "8189:8189/udp" # WebRTC/ICE UDP 
+      - "8189:8189/udp" # WebRTC/ICE UDP
   onvif-discovery:
     image: docker.io/intel/vippet-onvif-discovery:${DOCKER_TAG}
     build:
@@ -224,4 +225,3 @@ services:
       http_proxy: ${http_proxy}
       https_proxy: ${https_proxy}
       no_proxy: ${no_proxy}
-
