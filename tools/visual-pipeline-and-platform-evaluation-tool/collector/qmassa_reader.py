@@ -10,7 +10,7 @@ import time
 # === Constants ===
 FIFO_FILE = "/app/qmassa.fifo"
 DEBUG_LOG = "/app/qmassa_reader_trace.log"
-HOSTNAME = os.uname()[1]
+HOSTNAME = "ptl"
 RETRY_DELAY = 1  # seconds to wait before retrying after recoverable errors
 
 # Configure logger
