@@ -158,6 +158,9 @@ services:
     volumes:
       - "./shared/collector-signals:/app/.collector-signals"
       - "./shared/metrics:/volumes/metrics"
+      - "/sys/class/intel_pmt:/sys/class/intel_pmt:ro"
+      - "/sys/bus/pci/drivers/intel_vpu:/sys/bus/pci/drivers/intel_vpu:ro"
+      - "/sys/kernel/debug:/sys/kernel/debug:ro"
     restart: on-failure:5
     depends_on:
       vippet:

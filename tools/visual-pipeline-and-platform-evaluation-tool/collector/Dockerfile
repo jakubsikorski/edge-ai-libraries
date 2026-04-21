@@ -51,6 +51,8 @@ WORKDIR /app
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY telegraf.conf /etc/telegraf
 COPY qmassa_reader.py qmassa_reader.py
+COPY npu-monitor-tool.py npu_monitor_tool.py
+COPY npu_reader.py npu_reader.py
 COPY read_cpu_freq.sh read_cpu_freq.sh
 COPY entrypoint.sh /entrypoint.sh
 
