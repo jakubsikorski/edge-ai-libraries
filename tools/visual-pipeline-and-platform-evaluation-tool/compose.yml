@@ -154,7 +154,7 @@ services:
     ports:
       - "7860:7860"
   metrics-service:
-    image: docker.io/intel/metrics-service:2026.1.0-20260417-weekly
+    image: intel/metrics-manager:2026.1.0-20260508-weekly
     container_name: metrics-service
     ports:
       - "9090:9090"
@@ -178,7 +178,8 @@ services:
       METRICS_RETENTION_SECONDS: 300
       http_proxy: ${http_proxy}
       https_proxy: ${https_proxy}
-      no_proxy: ${no_proxy}
+      no_proxy: ${no_proxy},vippet
+      METRICS_MANAGER_HOSTNAME: ptl
     restart: on-failure:5
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9090/health"]
